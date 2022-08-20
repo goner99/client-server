@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <title>RPG.io</title>
+</head>
+<body>
+    <!-- USER INTERFACE -->
+    <div class="user-interface" id="user-interface">
+        <h1>RPG.io</h1>
+        <div class="form-user">
+            <div id="chara">
+                <div id="btn-left">
+                    <span class="fa fa-angle-left"></span>
+                </div>
+                <dir id="choose-character">
+                </dir>
+                <div id="btn-right">
+                    <span class="fa fa-angle-right"></span>
+                </div>                
+            </div>
+           
+            <form id="form-user">
+                <input type="text" id="user" placeholder="User">
+                <input type="button" id="btn-user" value="Play">    
+            </form>
+        </div>
+    </div>
+
+    <!-- CHAT-->
+    <div class="chat-container" id="chat-container">
+        <div class="chat">
+            <div class="chat-message">
+                <div id="input"></div>
+                <div id="output"></div>
+            </div>
+            <form id="form-chat">
+                <input type="text" autocomplete="off" id="message" placeholder="Message">
+                <input type="button" id="btn-chat" value="Send">    
+            </form>
+        </div>
+    </div>
+    
+
+    
+    <canvas id="canvas"></canvas>
+    <script>
+        const spriteCharacters = new Image()
+        spriteCharacters.src = "./assets/characters.png"
+        const spriteSkills = new Image()
+        spriteSkills.src = "./assets/skills.png"
+
+
+    </script>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <script src="./js/boundary.js"></script>
+
+    <script src="./js/loadassets.js"></script>
+    <script src="./js/sprites.js"></script>
+    <script src="./js/dimensions.js"></script>
+    <script src="./js/inputhandler.js"></script>
+    <script src="./js/enemy.js"></script>
+    <script src="./js/skill.js"></script>
+    <script src="./js/player.js"></script>
+    <script src="./js/worldmap.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
